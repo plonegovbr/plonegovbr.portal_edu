@@ -58,24 +58,24 @@ bin/pip bin/tox bin/mxdev:
 	bin/pip install -U "pip" "wheel" "cookiecutter" "mxdev" "tox" "pre-commit"
 	if [ -d $(GIT_FOLDER) ]; then bin/pre-commit install; else echo "$(RED) Not installing pre-commit$(RESET)";fi
 
+constraints-mxdev.txt:  bin/tox
+	bin/tox -e init
+
 .PHONY: config
 config: bin/pip  ## Create instance configuration
 	@echo "$(GREEN)==> Create instance configuration$(RESET)"
 	bin/cookiecutter -f --no-input --config-file instance.yaml gh:plone/cookiecutter-zope-instance
 
 .PHONY: build-dev
-build-dev: config ## pip install Plone packages
+build-dev: config constraints-mxdev.txt ## pip install Plone packages
 	@echo "$(GREEN)==> Setup Build$(RESET)"
-	bin/mxdev -c mx.ini
 	bin/pip install -r requirements-mxdev.txt
 
 .PHONY: install
 install: build-dev ## Install Plone 6.0
 
-
 .PHONY: build
 build: build-dev ## Install Plone 6.0
-
 
 .PHONY: clean
 clean: ## Remove old virtualenv and creates a new one
@@ -111,11 +111,11 @@ i18n: bin/i18ndude ## Update locales
 
 # Tests
 .PHONY: test
-test: bin/tox ## run tests
+test: bin/tox constraints-mxdev.txt ## run tests
 	DEVELOP_DISTRIBUTIONS=$(DISTRIBUTIONS) bin/tox -e test
 
 .PHONY: test-coverage
-test-coverage: bin/tox ## run tests with coverage
+test-coverage: bin/tox constraints-mxdev.txt ## run tests with coverage
 	DEVELOP_DISTRIBUTIONS=$(DISTRIBUTIONS) bin/tox -e coverage
 
 # Docker image

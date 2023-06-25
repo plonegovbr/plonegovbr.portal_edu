@@ -16,8 +16,8 @@ on:
 jobs:
   qa:
     uses: plone/meta/.github/workflows/qa.yml@portalbrasil
-  test-mxdev:
-    uses: plone/meta/.github/workflows/test_mxdev.yml@portalbrasil
+  test:
+    uses: plone/meta/.github/workflows/test.yml@portalbrasil
   coverage:
     uses: plone/meta/.github/workflows/coverage.yml@portalbrasil
   release-ready:
