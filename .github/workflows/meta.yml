@@ -1,0 +1,35 @@
+# Generated from:
+# https://github.com/plone/meta/tree/master/config/default
+# See the inline comments on how to expand/tweak this configuration file
+name: Meta
+on:
+  push:
+    branches:
+      - master
+      - main
+  pull_request:
+    branches:
+      - master
+      - main
+  workflow_dispatch:
+
+jobs:
+  qa:
+    uses: plone/meta/.github/workflows/qa.yml@portalbrasil
+  test-mxdev:
+    uses: plone/meta/.github/workflows/test_mxdev.yml@portalbrasil
+  coverage:
+    uses: plone/meta/.github/workflows/coverage.yml@portalbrasil
+  release-ready:
+    uses: plone/meta/.github/workflows/release_ready.yml@portalbrasil
+  circular:
+    uses: plone/meta/.github/workflows/circular.yml@portalbrasil
+
+##
+# Specify additional jobs in .meta.toml:
+#  [github]
+#  additional_jobs = """
+#  another:
+#    uses: org/repo/.github/workflows/file.yml@main
+#  """
+##

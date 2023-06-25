@@ -1,0 +1,41 @@
+# Generated from:
+# https://github.com/plone/meta/tree/master/config/default
+# See the inline comments on how to expand/tweak this configuration file
+[meta]
+template = "default"
+commit-id = "a5f72fbf"
+
+[pyproject]
+codespell_skip = "*"
+codespell_ignores = "vew"
+dependencies_ignores = "['plone.volto', 'zestreleaser.towncrier', 'zest.releaser', 'pytest', 'pytest-cov', 'pytest-plone']"
+dependencies_mappings = [
+    "Plone = ['Products.CMFPlone', 'Products.CMFCore', 'Products.GenericSetup']",
+    ]
+check_manifest_ignores = """
+    "news/*",
+    "requirements-mxdev.txt",
+"""
+towncrier_issue_format = "[#{issue}](https://github.com/plonegovbr/plonegovbr.portal/issues/{issue})"
+
+[gitignore]
+extra_lines = """
+requirements-mxdev.txt
+"""
+
+[tox]
+test_runner = "pytest"
+test_path = "/tests"
+use_mxdev = true
+test_deps_additional = "-esources/plonegovbr.portal_base[test]"
+constrain_package_deps = "false"
+
+[github]
+branch = "portalbrasil"
+jobs = [
+    "qa",
+    "test-mxdev",
+    "coverage",
+    "release-ready",
+    "circular",
+    ]

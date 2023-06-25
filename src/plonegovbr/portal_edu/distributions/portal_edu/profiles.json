@@ -1,0 +1,9 @@
+{
+  "base": [
+    "plone.app.contenttypes:default",
+    "plone.app.caching:default",
+    "plonetheme.barceloneta:default",
+    "plonegovbr.portal_edu:default"
+  ],
+  "content": []
+}

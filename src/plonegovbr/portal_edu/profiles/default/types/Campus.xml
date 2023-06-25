@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<object xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+        meta_type="Dexterity FTI"
+        name="Campus"
+>
+
+  <!-- Enable addition on the whole site -->
+  <property name="global_allow">True</property>
+</object>

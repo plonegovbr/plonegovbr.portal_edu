@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+  <version>20230624001</version>
+  <dependencies>
+    <dependency>profile-plonegovbr.portal_base:default</dependency>
+  </dependencies>
+</metadata>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<registry xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+
+  <records interface="plonegovbr.portal_base.controlpanel.interfaces.IEduSettings"
+           prefix="pb_edu"
+  >
+    <value key="areas"
+           purge="false"
+    >{
+            "items": [
+                {
+                    "token": "sociais",
+                    "titles": {
+                        "pt-br": "Ciências Sociais"
+                    }
+                },
+                {
+                    "token": "engenharia",
+                    "titles": {
+                        "pt-br": "Engenharias"
+                    }
+                },
+                {
+                    "token": "tecnologia",
+                    "titles": {
+                        "pt-br": "Tecnologia",
+                    }
+                }
+            ]
+        }</value>
+    <value key="modalidades"
+           purge="false"
+    >{
+            "items": [
+                {
+                    "token": "tecnico",
+                    "titles": {
+                        "pt-br": "Ensino Técnico"
+                    }
+                },
+                {
+                    "token": "graduacao",
+                    "titles": {
+                        "pt-br": "Graduação"
+                    }
+                },
+                {
+                    "token": "especializacao",
+                    "titles": {
+                        "pt-br": "Especialização"
+                    }
+                },
+                {
+                    "token": "mestrado",
+                    "titles": {
+                        "pt-br": "Mestrado"
+                    }
+                },
+                {
+                    "token": "doutorado",
+                    "titles": {
+                        "pt-br": "Doutorado"
+                    }
+                },
+                {
+                    "token": "tecnologia",
+                    "titles": {
+                        "pt-br": "Tecnologia"
+                    }
+                }
+            ]
+        }</value>
+
+  </records>
+
+</registry>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<object name="portal_controlpanel">
+
+  <!-- Enable PortalBrasil.edu -->
+  <configlet action_id="pb_edu"
+             appId="pb_edu-controlpanel"
+             category="PortalBrasil"
+             condition_expr=""
+             icon_expr=""
+             title="PortalBrasil.edu: Configurações"
+             url_expr="string:${portal_url}/@@pb_edu-controlpanel"
+             visible="True"
+  >
+    <permission>Manage portal</permission>
+  </configlet>
+
+</object>

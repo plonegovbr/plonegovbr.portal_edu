@@ -1,0 +1,25 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="plonegovbr.portal_edu"
+    >
+
+  <genericsetup:registerProfile
+      name="default"
+      title="PortalBrasil.edu: Install"
+      description="Package to configure a new PortalBrasil.edu site"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      directory="profiles/default"
+      />
+
+  <genericsetup:registerProfile
+      name="uninstall"
+      title="PortalBrasil.edu: Uninstall"
+      description="Uninstall PortalBrasil.edu setup."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      directory="profiles/uninstall"
+      />
+
+  <include package=".upgrades" />
+
+</configure>

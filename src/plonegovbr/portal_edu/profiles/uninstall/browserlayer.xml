@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layers>
+  <layer name="plonegovbr.portal_edu"
+         remove="true"
+  />
+</layers>
