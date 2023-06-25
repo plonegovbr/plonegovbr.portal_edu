@@ -22,8 +22,6 @@ jobs:
     uses: plone/meta/.github/workflows/coverage.yml@portalbrasil
   release-ready:
     uses: plone/meta/.github/workflows/release_ready.yml@portalbrasil
-  circular:
-    uses: plone/meta/.github/workflows/circular.yml@portalbrasil
 
 ##
 # Specify additional jobs in .meta.toml:
