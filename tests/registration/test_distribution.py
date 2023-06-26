@@ -38,9 +38,9 @@ class TestDistributionRegistration:
         distribution = self.distribution
         assert distribution.handler is None
 
-    def test_distribution_has_no_post_handler(self):
+    def test_distribution_has_post_handler(self):
         distribution = self.distribution
-        assert distribution.post_handler is None
+        assert distribution.post_handler is not None
 
     @pytest.mark.parametrize(
         "profile",

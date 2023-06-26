@@ -9,6 +9,7 @@
       name="portal_edu"
       title="PortalBrasil.edu"
       description="Uma distribuição Plone para instituições de ensino brasileiras."
+      post_handler=".handler.post_handler"
       />
 
 </configure>

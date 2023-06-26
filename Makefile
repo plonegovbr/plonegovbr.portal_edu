@@ -17,6 +17,7 @@ YELLOW=`tput setaf 3`
 
 # Set distributions still in development
 DISTRIBUTIONS="portal_edu"
+ALLOWED_DISTRIBUTIONS=$(DISTRIBUTIONS)
 
 # Docker Image name
 IMAGE_NAME=ghcr.io/plonegovbr/portal_edu
@@ -84,11 +85,11 @@ clean: ## Remove old virtualenv and creates a new one
 
 .PHONY: start
 start: ## Start a Plone instance on localhost:8080
-	DEVELOP_DISTRIBUTIONS=$(DISTRIBUTIONS) PYTHONWARNINGS=ignore ./bin/runwsgi instance/etc/zope.ini
+	ALLOWED_DISTRIBUTIONS=$(ALLOWED_DISTRIBUTIONS) DEVELOP_DISTRIBUTIONS=$(DISTRIBUTIONS) PYTHONWARNINGS=ignore ./bin/runwsgi instance/etc/zope.ini
 
 .PHONY: console
 console: ## Start a zope console
-	DEVELOP_DISTRIBUTIONS=$(DISTRIBUTIONS) PYTHONWARNINGS=ignore ./bin/zconsole debug instance/etc/zope.conf
+	ALLOWED_DISTRIBUTIONS=$(ALLOWED_DISTRIBUTIONS) DEVELOP_DISTRIBUTIONS=$(DISTRIBUTIONS) PYTHONWARNINGS=ignore ./bin/zconsole debug instance/etc/zope.conf
 
 .PHONY: format
 format: bin/tox ## Format the codebase according to our standards
@@ -112,11 +113,11 @@ i18n: bin/i18ndude ## Update locales
 # Tests
 .PHONY: test
 test: bin/tox constraints-mxdev.txt ## run tests
-	DEVELOP_DISTRIBUTIONS=$(DISTRIBUTIONS) bin/tox -e test
+	ALLOWED_DISTRIBUTIONS=$(ALLOWED_DISTRIBUTIONS) DEVELOP_DISTRIBUTIONS=$(DISTRIBUTIONS) bin/tox -e test
 
 .PHONY: test-coverage
 test-coverage: bin/tox constraints-mxdev.txt ## run tests with coverage
-	DEVELOP_DISTRIBUTIONS=$(DISTRIBUTIONS) bin/tox -e coverage
+	ALLOWED_DISTRIBUTIONS=$(ALLOWED_DISTRIBUTIONS) DEVELOP_DISTRIBUTIONS=$(DISTRIBUTIONS) bin/tox -e coverage
 
 # Docker image
 .PHONY: build-image

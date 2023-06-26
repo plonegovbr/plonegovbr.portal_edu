@@ -1,0 +1,97 @@
+{
+  "schema": {
+    "title": "Criar novo site",
+    "description": "Adiciona um novo site PortalBrasil.edu a este servidor.",
+    "type": "object",
+    "required": [
+      "site_id",
+      "title"
+    ],
+    "properties": {
+      "site_id": {
+        "type": "string",
+        "title": "Caminho",
+        "default": "Plone",
+        "description": "O nome curto (id) do site. Não são permitidos caracteres especiais ou espaços. Isso acaba como parte do URL, a menos que seja ocultado por um servidor da Web upstream."
+      },
+      "title": {
+        "type": "string",
+        "title": "Title",
+        "default": "Site da Instituição",
+        "description": "Um título curto para o site. Ele será mostrado como parte do título da janela do navegador em cada página."
+      },
+      "description": {
+        "type": "string",
+        "title": "Descrição",
+        "default": "Descrição sobre o site"
+      },
+      "logo": {
+        "type": "string",
+        "format": "data-url",
+        "title": "Logo da instituição"
+      },
+      "default_language": {
+        "type": "string",
+        "title": "Idioma padrão"
+      },
+      "portal_timezone": {"$ref": "#/definitions/timezones"},
+      "setup_content": {
+        "type": "boolean",
+        "title": "Criar conteúdo de exemplo",
+        "description": "Devemos criar conteúdo de exemplo?",
+        "default": true
+      }
+    },
+    "definitions": {
+      "timezones": {
+        "title": "Fuso horário",
+        "type": "string",
+        "default": "America/Sao_Paulo",
+        "description": "A configuração de fuso horário padrão do portal. Os usuários poderão definir seu próprio fuso horário, se os fusos horários disponíveis estiverem definidos nas configurações de data e hora.",
+        "anyOf": [
+          {
+            "type": "string",
+            "enum": [
+              "America/Rio_Branco"
+            ],
+            "title": "Acre (America/Rio_Branco)"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "America/Noronha"
+            ],
+            "title": "Fernando de Noronha (America/Noronha)"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "America/Sao_Paulo"
+            ],
+            "title": "Brasília (America/Sao_Paulo)"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "America/Manaus"
+            ],
+            "title": "Manaus (America/Manaus)"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "UTC"
+            ],
+            "title": "UTC (UTC)"
+          }
+        ]
+      }
+    }
+  },
+  "uischema": {
+    "logo": {
+      "ui:widget": "file",
+      "ui:options": {"accept": ".svg"}
+      }
+  }
+}
