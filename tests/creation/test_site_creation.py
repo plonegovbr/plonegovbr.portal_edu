@@ -76,3 +76,16 @@ class TestDistributionPortalEdu:
     def test_types_available(self, get_fti, portal_type, global_allow):
         fti = get_fti(portal_type)
         assert fti.global_allow is global_allow
+
+    @pytest.mark.parametrize(
+        "portal_type,allowed",
+        [
+            ("Campus", True),
+            ("Curso", True),
+            ("Person", False),
+        ],
+    )
+    def test_types_in_navigation(self, portal_type, allowed):
+        types = api.portal.get_registry_record("plone.displayed_types")
+        is_in_navigation = portal_type in types
+        assert is_in_navigation is allowed

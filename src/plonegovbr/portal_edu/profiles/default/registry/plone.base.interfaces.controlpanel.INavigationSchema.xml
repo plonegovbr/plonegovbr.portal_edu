@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<registry>
+  <records interface="plone.base.interfaces.controlpanel.INavigationSchema"
+           prefix="plone"
+  >
+    <value key="displayed_types">
+      <element>Link</element>
+      <element>News Item</element>
+      <element>Document</element>
+      <element>Event</element>
+      <element>Collection</element>
+      <element>Campus</element>
+      <element>Curso</element>
+    </value>
+    <value key="filter_on_workflow">False</value>
+    <value key="generate_tabs">True</value>
+    <value key="navigation_depth">3</value>
+    <value key="nonfolderish_tabs">False</value>
+    <value key="parent_types_not_to_query">
+      <element>TempFolder</element>
+    </value>
+    <value key="root">/</value>
+    <value key="sitemap_depth">3</value>
+    <value key="sort_tabs_on">getObjPositionInParent</value>
+    <value key="sort_tabs_reversed">False</value>
+    <value key="workflow_states_to_show" />
+  </records>
+</registry>
