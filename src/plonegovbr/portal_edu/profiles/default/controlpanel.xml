@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <object name="portal_controlpanel">
 
-  <!-- Enable PortalBrasil.edu -->
+  <!-- Habilita PortalBrasil.edu -->
   <configlet action_id="pb_edu"
              appId="pb_edu-controlpanel"
-             category="PortalBrasil"
+             category="Products"
              condition_expr=""
              icon_expr=""
              title="PortalBrasil.edu: Configurações"
