@@ -70,7 +70,7 @@
     ],
     "description": "A Plone Site",
     "effective": null,
-    "exclude_from_nav": false,
+    "exclude_from_nav": true,
     "expires": null,
     "id": "Plone",
     "is_folderish": true,
