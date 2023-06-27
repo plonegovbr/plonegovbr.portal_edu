@@ -70,6 +70,8 @@ jobs:
         run: |
           pip install mxdev
           mxdev -c mx.ini
+          ls -la *
+          ls -la sources/*
 
       - name: "Gera imagem e publica no ghcr.io"
         uses: docker/build-push-action@v3
