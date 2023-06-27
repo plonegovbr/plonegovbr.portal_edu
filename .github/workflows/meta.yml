@@ -14,22 +14,22 @@ on:
   workflow_dispatch:
 
 jobs:
-  # qa:
-  #   uses: plone/meta/.github/workflows/qa.yml@portalbrasil
-  # test:
-  #   uses: plone/meta/.github/workflows/test.yml@portalbrasil
-  # coverage:
-  #   uses: plone/meta/.github/workflows/coverage.yml@portalbrasil
-  # release-ready:
-  #   uses: plone/meta/.github/workflows/release_ready.yml@portalbrasil
+  qa:
+    uses: plone/meta/.github/workflows/qa.yml@portalbrasil
+  test:
+    uses: plone/meta/.github/workflows/test.yml@portalbrasil
+  coverage:
+    uses: plone/meta/.github/workflows/coverage.yml@portalbrasil
+  release-ready:
+    uses: plone/meta/.github/workflows/release_ready.yml@portalbrasil
 
   image:
     runs-on: ubuntu-latest
-    # needs:
-    #   - qa
-    #   - test
-    #   - coverage
-    #   - release-ready
+    needs:
+      - qa
+      - test
+      - coverage
+      - release-ready
 
     permissions:
       contents: read
