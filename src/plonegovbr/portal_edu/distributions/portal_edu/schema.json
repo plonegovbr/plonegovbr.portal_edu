@@ -32,7 +32,8 @@
       },
       "default_language": {
         "type": "string",
-        "title": "Idioma padrão"
+        "title": "Idioma padrão",
+        "default": "pt-br"
       },
       "portal_timezone": {"$ref": "#/definitions/timezones"},
       "setup_content": {
@@ -89,6 +90,9 @@
     }
   },
   "uischema": {
+    "default_language": {
+      "ui:widget": "hidden"
+    },
     "logo": {
       "ui:widget": "file",
       "ui:options": {"accept": ".svg"}
