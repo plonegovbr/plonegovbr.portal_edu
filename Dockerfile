@@ -5,7 +5,7 @@ FROM plone/server-builder:${PLONE_VERSION} as builder
 WORKDIR /app
 
 # Add local code
-COPY sources sources
+COPY ./sources sources
 COPY . src/plonegovbr.portal_edu
 
 # Install local requirements and pre-compile mo files
