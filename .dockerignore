@@ -39,4 +39,4 @@ var/
 .installed.txt
 requirements-mxdev.txt
 
-!/sources/plonegovbr.portal_base
+!sources/plonegovbr.portal_base
