@@ -34,7 +34,6 @@ var/
 /.make-sentinels/
 /*-mxdev.txt
 /reports/
-/sources/
 /venv/
 .installed.txt
 requirements-mxdev.txt

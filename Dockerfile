@@ -5,13 +5,12 @@ FROM plone/server-builder:${PLONE_VERSION} as builder
 WORKDIR /app
 
 # Add local code
+COPY sources sources
 COPY . src/plonegovbr.portal_edu
 
 # Install local requirements and pre-compile mo files
 RUN <<EOT
     set -e
-    ls -la src/plonegovbr.portal_edu/
-    mv src/plonegovbr.portal_edu/sources ./sources
     mv src/plonegovbr.portal_edu/requirements-docker.txt ./requirements.txt
     bin/pip install -r requirements.txt
     bin/python /compile_mo.py
