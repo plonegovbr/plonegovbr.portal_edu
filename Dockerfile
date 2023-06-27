@@ -5,6 +5,7 @@ FROM plone/server-builder:${PLONE_VERSION} as builder
 WORKDIR /app
 
 # Add local code
+COPY ./sources sources
 COPY . src/plonegovbr.portal_edu
 
 # Install local requirements and pre-compile mo files
@@ -13,7 +14,7 @@ RUN <<EOT
     mv src/plonegovbr.portal_edu/requirements-docker.txt ./requirements.txt
     bin/pip install -r requirements.txt
     bin/python /compile_mo.py
-    rm -Rf src/ /compile_mo.py compile_mo.log
+    rm -Rf src/ sources/ /compile_mo.py compile_mo.log
 EOT
 
 FROM plone/server-prod-config:${PLONE_VERSION}

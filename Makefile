@@ -15,6 +15,9 @@ GREEN=`tput setaf 2`
 RESET=`tput sgr0`
 YELLOW=`tput setaf 3`
 
+# Plone Version
+PLONE_VERSION=6
+
 # Set distributions still in development
 DISTRIBUTIONS="portal_edu"
 ALLOWED_DISTRIBUTIONS=$(DISTRIBUTIONS)

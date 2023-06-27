@@ -1,1 +1,2 @@
+sources/plonegovbr.portal_base
 src/plonegovbr.portal_edu

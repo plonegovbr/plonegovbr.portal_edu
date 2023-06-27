@@ -3,6 +3,7 @@ graft docs
 graft news
 graft tests
 include .coveragerc
+include .dockerignore
 include .editorconfig
 include *.txt
 include *.yml
