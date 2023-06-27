@@ -47,6 +47,8 @@ class TestDistributionPortalEdu:
         "path,title,portal_type,review_state",
         [
             ("/", "Universidade Livre", "Plone Site", ""),
+            ("/campus", "Campi", "Document", "published"),
+            ("/campus/campus-principal", "Campus Principal", "Campus", "published"),
         ],
     )
     def test_content_created(self, path, title, portal_type, review_state):
