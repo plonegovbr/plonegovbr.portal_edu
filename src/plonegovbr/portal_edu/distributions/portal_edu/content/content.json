@@ -1,5 +1,550 @@
 [{
-    "@id": "/images",
+    "@id": "/campus",
+    "@type": "Document",
+    "UID": "2aab7644f7cd434cb662b85e96d18222",
+    "allow_discussion": false,
+    "blocks": {
+        "7e9912ec-8c5f-4793-a9f1-f94fe46d7efe": {
+            "@type": "description"
+        },
+        "8246a488-bb00-436f-a5c8-a1ab86edae30": {
+            "@type": "listing",
+            "headlineTag": "h2",
+            "querystring": {
+                "query": [
+                    {
+                        "i": "portal_type",
+                        "o": "plone.app.querystring.operation.selection.any",
+                        "v": [
+                            "Campus"
+                        ]
+                    }
+                ],
+                "sort_order": "ascending"
+            },
+            "styles": {},
+            "variation": "grid"
+        },
+        "b303c6fa-efeb-45d7-89f4-905e97bcdf16": {
+            "@type": "title"
+        }
+    },
+    "blocks_layout": {
+        "items": [
+            "b303c6fa-efeb-45d7-89f4-905e97bcdf16",
+            "7e9912ec-8c5f-4793-a9f1-f94fe46d7efe",
+            "8246a488-bb00-436f-a5c8-a1ab86edae30"
+        ]
+    },
+    "contributors": [],
+    "created": "2023-06-27T15:23:42+00:00",
+    "creators": [
+        "admin"
+    ],
+    "description": "Campi da nossa institui\u00e7\u00e3o",
+    "effective": "2023-06-27T12:35:01",
+    "exclude_from_nav": false,
+    "expires": null,
+    "id": "campus",
+    "is_folderish": true,
+    "language": "pt-br",
+    "layout": "document_view",
+    "lock": {
+        "locked": false,
+        "stealable": true
+    },
+    "modified": "2023-06-27T15:35:01+00:00",
+    "parent": {
+        "@id": "/",
+        "@type": "Plone Site",
+        "UID": "71846cd61b404039a69de1298738c493",
+        "description": "A Plone Site",
+        "title": "Boas vindas",
+        "type_title": "Site Plone"
+    },
+    "preview_caption": null,
+    "preview_image": null,
+    "review_state": "published",
+    "rights": "",
+    "subjects": [],
+    "title": "Campi",
+    "type_title": "P\u00e1gina",
+    "version": "current",
+    "workflow_history": {
+        "simple_publication_workflow": [
+            {
+                "action": null,
+                "actor": "admin",
+                "comments": "",
+                "review_state": "private",
+                "time": "2023-06-27T15:23:42+00:00"
+            },
+            {
+                "action": "publish",
+                "actor": "admin",
+                "comments": "",
+                "review_state": "published",
+                "time": "2023-06-27T15:35:01+00:00"
+            }
+        ]
+    },
+    "working_copy": null,
+    "working_copy_of": null
+},{
+    "@id": "/campus/campus-principal",
+    "@type": "Campus",
+    "UID": "e07a6e07af77403ebcd680b22cb5215c",
+    "address": null,
+    "address_2": null,
+    "allow_discussion": false,
+    "blocks": {
+        "643d00a8-7f1e-4eba-8be6-8dd70cd1deaa": {
+            "@type": "slate",
+            "plaintext": "Cursos oferecidos",
+            "styles": {},
+            "value": [
+                {
+                    "children": [
+                        {
+                            "text": "Cursos oferecidos"
+                        }
+                    ],
+                    "type": "h2"
+                }
+            ]
+        },
+        "c6bb5659-6a4c-4cf5-85a5-8a9df86e0fb2": {
+            "@type": "description"
+        },
+        "ddcd8682-b096-4b49-9a01-e325d93d71f1": {
+            "@type": "title"
+        },
+        "fefbfb45-4acc-47b0-b0b6-23003b040558": {
+            "@type": "search",
+            "facets": [
+                {
+                    "@id": "0163309a-2f8f-4ab0-815d-cbdaa4ed51c8",
+                    "advanced": false,
+                    "field": {
+                        "label": "Modalidades",
+                        "value": "modalidades"
+                    },
+                    "hidden": false,
+                    "multiple": true,
+                    "title": "Modalidade",
+                    "type": "checkboxFacet"
+                }
+            ],
+            "facetsTitle": "Filtros",
+            "listingBodyTemplate": "summary",
+            "query": {
+                "query": [
+                    {
+                        "i": "portal_type",
+                        "o": "plone.app.querystring.operation.selection.any",
+                        "v": [
+                            "Curso"
+                        ]
+                    },
+                    {
+                        "i": "campi",
+                        "o": "plone.app.querystring.operation.selection.any",
+                        "v": [
+                            "e07a6e07af77403ebcd680b22cb5215c"
+                        ]
+                    }
+                ],
+                "sort_order": "ascending"
+            },
+            "showSearchInput": true,
+            "showTotalResults": true
+        },
+        "undefined": {
+            "@type": "search",
+            "facets": [
+                {
+                    "@id": "0163309a-2f8f-4ab0-815d-cbdaa4ed51c8",
+                    "advanced": false,
+                    "field": {
+                        "label": "Modalidades",
+                        "value": "modalidades"
+                    },
+                    "hidden": false,
+                    "multiple": true,
+                    "title": "Modalidade",
+                    "type": "checkboxFacet"
+                }
+            ],
+            "facetsTitle": "Filtros",
+            "listingBodyTemplate": "summary",
+            "query": {
+                "query": [
+                    {
+                        "i": "portal_type",
+                        "o": "plone.app.querystring.operation.selection.any",
+                        "v": [
+                            "Curso"
+                        ]
+                    },
+                    {
+                        "i": "campi",
+                        "o": "plone.app.querystring.operation.selection.any",
+                        "v": [
+                            "e07a6e07af77403ebcd680b22cb5215c"
+                        ]
+                    }
+                ],
+                "sort_order": "ascending"
+            },
+            "showSearchInput": true,
+            "showTotalResults": true
+        }
+    },
+    "blocks_layout": {
+        "items": [
+            "ddcd8682-b096-4b49-9a01-e325d93d71f1",
+            "c6bb5659-6a4c-4cf5-85a5-8a9df86e0fb2",
+            "643d00a8-7f1e-4eba-8be6-8dd70cd1deaa",
+            "fefbfb45-4acc-47b0-b0b6-23003b040558"
+        ]
+    },
+    "changeNote": "",
+    "city": "Bras\u00edlia",
+    "contact_email": "campus-principal@instituicao.edu.br",
+    "contact_phone": "+556132457854",
+    "contact_website": null,
+    "country": "BR",
+    "created": "2023-06-27T15:25:29+00:00",
+    "description": "Campus principal da nossa institui\u00e7\u00e3o",
+    "exclude_from_nav": false,
+    "id": "campus-principal",
+    "is_folderish": true,
+    "language": "pt-br",
+    "layout": "view",
+    "lock": {},
+    "modified": "2023-06-27T15:35:01+00:00",
+    "nav_title": "Principal",
+    "parent": {
+        "@id": "/campus",
+        "@type": "Document",
+        "UID": "2aab7644f7cd434cb662b85e96d18222",
+        "description": "Campi da nossa institui\u00e7\u00e3o",
+        "image_field": null,
+        "image_scales": null,
+        "review_state": "published",
+        "title": "Campi",
+        "type_title": "P\u00e1gina"
+    },
+    "postal_code": "70123",
+    "preview_caption": null,
+    "preview_image": {
+        "blob_path": "blobs/e07a6e07af77403ebcd680b22cb5215c-preview_image/drahomir-posteby-mach-n4y3eiQSIoc-unsplash.jpg",
+        "content-type": "image/jpeg",
+        "filename": "drahomir-posteby-mach-n4y3eiQSIoc-unsplash.jpg",
+        "height": 1080,
+        "size": 894693,
+        "width": 1920
+    },
+    "review_state": "published",
+    "state": "DF",
+    "subjects": [],
+    "title": "Campus Principal",
+    "type_title": "Campus",
+    "version": "current",
+    "versioning_enabled": true,
+    "workflow_history": {
+        "simple_publication_workflow": [
+            {
+                "action": null,
+                "actor": "admin",
+                "comments": "",
+                "review_state": "private",
+                "time": "2023-06-27T15:25:29+00:00"
+            },
+            {
+                "action": "publish",
+                "actor": "admin",
+                "comments": "",
+                "review_state": "published",
+                "time": "2023-06-27T15:35:01+00:00"
+            }
+        ]
+    },
+    "working_copy": null,
+    "working_copy_of": null
+},{
+    "@id": "/cursos",
+    "@type": "Document",
+    "UID": "8e5e916b3bbe47179d0526402f751b85",
+    "allow_discussion": false,
+    "blocks": {
+        "2e106f72-ab77-4841-a44e-fa375889f67e": {
+            "@type": "description"
+        },
+        "5081e415-ec37-4a6b-a68d-d686b33c1847": {
+            "@type": "listing",
+            "headlineTag": "h2",
+            "querystring": {
+                "query": [
+                    {
+                        "i": "portal_type",
+                        "o": "plone.app.querystring.operation.selection.any",
+                        "v": [
+                            "Curso"
+                        ]
+                    }
+                ],
+                "sort_order": "ascending"
+            },
+            "styles": {},
+            "variation": "grid"
+        },
+        "56a8b629-adb0-46e2-9cea-7ce773c598a8": {
+            "@type": "title"
+        },
+        "8513a3ab-bcee-4658-8ace-0a92c8d0bc0d": {
+            "@type": "slate"
+        }
+    },
+    "blocks_layout": {
+        "items": [
+            "56a8b629-adb0-46e2-9cea-7ce773c598a8",
+            "2e106f72-ab77-4841-a44e-fa375889f67e",
+            "5081e415-ec37-4a6b-a68d-d686b33c1847",
+            "8513a3ab-bcee-4658-8ace-0a92c8d0bc0d"
+        ]
+    },
+    "contributors": [],
+    "created": "2023-06-27T15:26:02+00:00",
+    "creators": [
+        "admin"
+    ],
+    "description": "Cursos oferecidos pela institui\u00e7\u00e3o",
+    "effective": "2023-06-27T12:35:02",
+    "exclude_from_nav": false,
+    "expires": null,
+    "id": "cursos",
+    "is_folderish": true,
+    "language": "pt-br",
+    "layout": "document_view",
+    "lock": {
+        "locked": false,
+        "stealable": true
+    },
+    "modified": "2023-06-27T15:35:02+00:00",
+    "parent": {
+        "@id": "/",
+        "@type": "Plone Site",
+        "UID": "71846cd61b404039a69de1298738c493",
+        "description": "A Plone Site",
+        "title": "Boas vindas",
+        "type_title": "Site Plone"
+    },
+    "preview_caption": null,
+    "preview_image": null,
+    "review_state": "published",
+    "rights": "",
+    "subjects": [],
+    "title": "Cursos",
+    "type_title": "P\u00e1gina",
+    "version": "current",
+    "workflow_history": {
+        "simple_publication_workflow": [
+            {
+                "action": null,
+                "actor": "admin",
+                "comments": "",
+                "review_state": "private",
+                "time": "2023-06-27T15:26:02+00:00"
+            },
+            {
+                "action": "publish",
+                "actor": "admin",
+                "comments": "",
+                "review_state": "published",
+                "time": "2023-06-27T15:35:02+00:00"
+            }
+        ]
+    },
+    "working_copy": null,
+    "working_copy_of": null
+},{
+    "@id": "/cursos/engenharia-ambiental",
+    "@type": "Curso",
+    "UID": "eceb3d3dc11e415a8f5bb8573dca9f43",
+    "allow_discussion": false,
+    "areas": [
+        "engenharia"
+    ],
+    "blocks": {
+        "461ee3bb-b90a-48f7-925e-b0b7190c4acf": {
+            "@type": "description"
+        },
+        "a94a017b-aa1b-4170-a714-7c5d813ce8c1": {
+            "@type": "title"
+        },
+        "bcd10355-224e-46c1-9891-d50f7e161492": {
+            "@type": "slate",
+            "plaintext": "o controle de impacto de atividades humanas sobre o ambiente natural para reduzir a polui\u00e7\u00e3o do ar, da \u00e1gua e do solo; recupera\u00e7\u00e3o de \u00e1reas degradadas; racionaliza\u00e7\u00e3o na explora\u00e7\u00e3o de recursos h\u00eddricos; projeto, constru\u00e7\u00e3o e opera\u00e7\u00e3o de sistemas de tratamento e abastecimento de \u00e1gua e de coleta, transporte e tratamento de esgoto e res\u00edduos s\u00f3lidos; sistemas de drenagem de \u00e1guas pluviais; implanta\u00e7\u00e3o de sistemas de gest\u00e3o ambiental; elabora\u00e7\u00e3o de relat\u00f3rios de impactos ambientais; controle da polui\u00e7\u00e3o atmosf\u00e9rica.",
+            "styles": {},
+            "value": [
+                {
+                    "children": [
+                        {
+                            "children": [
+                                {
+                                    "text": "o controle de impacto de atividades humanas sobre o ambiente natural para reduzir a polui\u00e7\u00e3o do ar, da \u00e1gua e do solo;"
+                                }
+                            ],
+                            "type": "li"
+                        },
+                        {
+                            "children": [
+                                {
+                                    "text": "recupera\u00e7\u00e3o de \u00e1reas degradadas; "
+                                }
+                            ],
+                            "type": "li"
+                        },
+                        {
+                            "children": [
+                                {
+                                    "text": "racionaliza\u00e7\u00e3o na explora\u00e7\u00e3o de recursos h\u00eddricos;"
+                                }
+                            ],
+                            "type": "li"
+                        },
+                        {
+                            "children": [
+                                {
+                                    "text": "projeto, constru\u00e7\u00e3o e opera\u00e7\u00e3o de sistemas de tratamento e abastecimento de \u00e1gua e de coleta, transporte e tratamento de esgoto e res\u00edduos s\u00f3lidos;"
+                                }
+                            ],
+                            "type": "li"
+                        },
+                        {
+                            "children": [
+                                {
+                                    "text": "sistemas de drenagem de \u00e1guas pluviais;"
+                                }
+                            ],
+                            "type": "li"
+                        },
+                        {
+                            "children": [
+                                {
+                                    "text": "implanta\u00e7\u00e3o de sistemas de gest\u00e3o ambiental;"
+                                }
+                            ],
+                            "type": "li"
+                        },
+                        {
+                            "children": [
+                                {
+                                    "text": "elabora\u00e7\u00e3o de relat\u00f3rios de impactos ambientais;"
+                                }
+                            ],
+                            "type": "li"
+                        },
+                        {
+                            "children": [
+                                {
+                                    "text": "controle da polui\u00e7\u00e3o atmosf\u00e9rica."
+                                }
+                            ],
+                            "type": "li"
+                        }
+                    ],
+                    "type": "ul"
+                }
+            ]
+        },
+        "c225492e-48ee-4781-a443-cebd0d7bf873": {
+            "@type": "slate",
+            "plaintext": "Setores de Atua\u00e7\u00e3o",
+            "styles": {},
+            "value": [
+                {
+                    "children": [
+                        {
+                            "text": "Setores de Atua\u00e7\u00e3o"
+                        }
+                    ],
+                    "type": "h2"
+                }
+            ]
+        }
+    },
+    "blocks_layout": {
+        "items": [
+            "a94a017b-aa1b-4170-a714-7c5d813ce8c1",
+            "461ee3bb-b90a-48f7-925e-b0b7190c4acf",
+            "c225492e-48ee-4781-a443-cebd0d7bf873",
+            "bcd10355-224e-46c1-9891-d50f7e161492"
+        ]
+    },
+    "changeNote": "",
+    "created": "2023-06-27T15:30:12+00:00",
+    "description": "O curso de Engenharia Ambiental e Sanit\u00e1ria pertence \u00e0 modalidade civil, campo e atua\u00e7\u00e3o profissional de Engenharia Ambiental e Sanit\u00e1ria. ",
+    "exclude_from_nav": false,
+    "id": "engenharia-ambiental",
+    "is_folderish": true,
+    "language": "pt-br",
+    "layout": "view",
+    "lock": {},
+    "modalidades": [
+        "graduacao"
+    ],
+    "modified": "2023-06-27T15:36:53+00:00",
+    "nav_title": null,
+    "parent": {
+        "@id": "/cursos",
+        "@type": "Document",
+        "UID": "8e5e916b3bbe47179d0526402f751b85",
+        "description": "Cursos oferecidos pela institui\u00e7\u00e3o",
+        "image_field": null,
+        "image_scales": null,
+        "review_state": "published",
+        "title": "Cursos",
+        "type_title": "P\u00e1gina"
+    },
+    "preview_caption": null,
+    "preview_image": {
+        "blob_path": "blobs/eceb3d3dc11e415a8f5bb8573dca9f43-preview_image/jonatan-lewczuk-MAN-afLJt2E-unsplash.jpg",
+        "content-type": "image/jpeg",
+        "filename": "jonatan-lewczuk-MAN-afLJt2E-unsplash.jpg",
+        "height": 1077,
+        "size": 706708,
+        "width": 1915
+    },
+    "review_state": "published",
+    "subjects": [],
+    "title": "Engenharia Ambiental",
+    "type_title": "Curso",
+    "version": "current",
+    "versioning_enabled": true,
+    "workflow_history": {
+        "simple_publication_workflow": [
+            {
+                "action": null,
+                "actor": "admin",
+                "comments": "",
+                "review_state": "private",
+                "time": "2023-06-27T15:30:12+00:00"
+            },
+            {
+                "action": "publish",
+                "actor": "admin",
+                "comments": "",
+                "review_state": "published",
+                "time": "2023-06-27T15:35:02+00:00"
+            }
+        ]
+    },
+    "working_copy": null,
+    "working_copy_of": null
+},{
+    "@id": "/imagens",
     "@type": "Document",
     "UID": "99b8577ad8f0402cac90361fee5b157a",
     "allow_discussion": false,
@@ -63,34 +608,34 @@
     "creators": [
         "admin"
     ],
-    "description": "Images used in this site",
-    "effective": "2023-06-24T16:37:02",
+    "description": "Imagens usadas no site",
+    "effective": "2023-06-24T16:37:00",
     "exclude_from_nav": true,
     "expires": null,
-    "id": "images",
+    "id": "imagens",
     "is_folderish": true,
-    "language": "en-us",
+    "language": "pt-br",
     "layout": "document_view",
     "lock": {
         "locked": false,
         "stealable": true
     },
-    "modified": "2023-06-24T19:38:00+00:00",
+    "modified": "2023-06-27T15:23:05+00:00",
     "parent": {
         "@id": "/",
         "@type": "Plone Site",
         "UID": "71846cd61b404039a69de1298738c493",
         "description": "A Plone Site",
-        "title": "Welcome to Plone 6!",
-        "type_title": "Plone Site"
+        "title": "Boas vindas",
+        "type_title": "Site Plone"
     },
     "preview_caption": null,
     "preview_image": null,
     "review_state": "published",
     "rights": "",
     "subjects": [],
-    "title": "Images",
-    "type_title": "Page",
+    "title": "Imagens",
+    "type_title": "P\u00e1gina",
     "version": "current",
     "workflow_history": {
         "simple_publication_workflow": [
@@ -113,7 +658,7 @@
     "working_copy": null,
     "working_copy_of": null
 },{
-    "@id": "/images/plone-foundation-logo.png",
+    "@id": "/imagens/plone-foundation-logo.png",
     "@type": "Image",
     "UID": "2fa170f408524d45bf194f15008b123a",
     "allow_discussion": false,
@@ -136,26 +681,26 @@
         "width": 2000
     },
     "is_folderish": false,
-    "language": "en-us",
+    "language": "pt-br",
     "layout": "image_view",
     "lock": {},
-    "modified": "2023-06-24T19:37:23+00:00",
+    "modified": "2023-06-27T15:23:05+00:00",
     "parent": {
-        "@id": "/images",
+        "@id": "/imagens",
         "@type": "Document",
         "UID": "99b8577ad8f0402cac90361fee5b157a",
-        "description": "Images used in this site",
+        "description": "Imagens usadas no site",
         "image_field": null,
         "image_scales": null,
         "review_state": "published",
-        "title": "Images",
-        "type_title": "Page"
+        "title": "Imagens",
+        "type_title": "P\u00e1gina"
     },
     "review_state": null,
     "rights": "",
     "subjects": [],
     "title": "Plone Foundation Logo",
-    "type_title": "Image",
+    "type_title": "Imagem",
     "version": "current",
     "working_copy": null,
     "working_copy_of": null
