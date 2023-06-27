@@ -70,11 +70,11 @@ jobs:
         run: |
           pip install mxdev
           mxdev -c mx.ini
-          ls -lah ./sources
 
       - name: "Gera imagem e publica no ghcr.io"
         uses: docker/build-push-action@v3
         with:
+          context: ./
           platforms: linux/amd64
           file: Dockerfile
           push: ${{ github.event_name != 'pull_request' }}
