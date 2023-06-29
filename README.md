@@ -1,4 +1,4 @@
-<div align="center"><img alt="logo" src="https://raw.githubusercontent.com/plonegovbr/plonegovbr.portal/main/docs/logo.png" width="150" /></div>
+<div align="center"><img alt="logo" src="https://raw.githubusercontent.com/plonegovbr/plonegovbr.portal/main/docs/portalbrasil-edu.png" width="150" /></div>
 
 <h1 align="center">PortalBrasil.edu</h1>
 
