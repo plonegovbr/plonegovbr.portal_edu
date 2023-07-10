@@ -48,7 +48,7 @@ jobs:
         run: python -m pip install tox
       - name: Initialize tox
         run: |
-          [ `tox list --no-desc -f init|wc -l` = 1 ] && tox -e init
+          if [ `tox list --no-desc -f init|wc -l` = 1 ]; then tox -e init;else true; fi
       - name: Run tests
         run: |
           tox -e test
