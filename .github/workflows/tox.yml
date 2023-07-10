@@ -1,0 +1,45 @@
+# Workflow meant to be used by external repositories
+# that are configured with this `meta` repository
+name: Tests
+on:
+  # allow this workflow to be called
+  # by other workflows from other repositories
+  workflow_call:
+    inputs:
+      os-packages:
+        required: false
+        type: string
+
+jobs:
+  test:
+    name: Tests report
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        python-version: ${{ fromJSON(vars.TEST_PYTHON_VERSIONS) }}
+        os: ${{ fromJSON(vars.TEST_OS_VERSIONS) }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: install OS packages
+        if: inputs.os-packages != ''
+        run: sudo apt-get install -y ${{ inputs.os-packages }}
+      - name: Cache packages
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ matrix.python-version }}-${{ hashFiles('tox.ini') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-${{ matrix.python-version }}-
+            ${{ runner.os }}-pip-
+      - name: Install dependencies
+        run: python -m pip install tox
+      - name: Initialize tox
+        run: |
+          [ `./bin/tox list --no-desc -f initd|wc -l` = 1 ] && tox -e init
+      - name: Run tests
+        run: |
+          tox -e test
