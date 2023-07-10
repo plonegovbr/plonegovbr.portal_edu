@@ -24,7 +24,7 @@ jobs:
     uses: plone/meta/.github/workflows/release_ready.yml@portalbrasil
 
   other-test:
-    name: Tests report
+    name: Other report
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -48,7 +48,7 @@ jobs:
         run: python -m pip install tox
       - name: Initialize tox
         run: |
-          [ `./bin/tox list --no-desc -f initd|wc -l` = 1 ] && tox -e init
+          [ `tox list --no-desc -f initd|wc -l` = 1 ] && tox -e init
       - name: Run tests
         run: |
           tox -e test
