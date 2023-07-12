@@ -3,7 +3,7 @@
 # See the inline comments on how to expand/tweak this configuration file
 [meta]
 template = "default"
-commit-id = "6f863ec6"
+commit-id = "e3bfb27e"
 
 [pyproject]
 codespell_skip = "*"
@@ -34,7 +34,7 @@ test_deps_additional = """
 """
 
 [github]
-branch = "portalbrasil"
+ref = "main"
 jobs = [
     "qa",
     "test",
