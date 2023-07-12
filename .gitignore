@@ -41,6 +41,7 @@ var/
 /venv/
 .installed.txt
 
+constraints-mxdev.txt
 requirements-mxdev.txt
 
 ##
