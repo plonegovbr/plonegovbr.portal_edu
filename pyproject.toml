@@ -142,6 +142,7 @@ ignore = [
     ".flake8",
     "mx.ini",
     "news/*",
+    "constraints-mxdev.txt",
     "requirements-mxdev.txt",
 
 ]
