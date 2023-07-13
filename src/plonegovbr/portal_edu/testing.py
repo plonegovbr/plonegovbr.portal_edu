@@ -14,6 +14,7 @@ DEFAULT_ANSWERS = {
     "default_language": "pt-br",
     "portal_timezone": "America/Sao_Paulo",
     "setup_content": True,
+    "logo": "name=teste;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==",  # noQA
 }
 
 

@@ -27,6 +27,10 @@ class TestDistributionPortalEdu:
     def test_plone_site_attributes(self, attr, expected):
         assert getattr(self.portal, attr) == expected
 
+    def test_plone_logo_applied(self):
+        expected_result = b"filenameb64:dGVzdGU7ZGF0YTppbWFnZS9wbmc=;datab64:iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg=="  # noQA
+        assert api.portal.get_registry_record("plone.site_logo") == expected_result
+
     @pytest.mark.parametrize(
         "package,expected",
         [
