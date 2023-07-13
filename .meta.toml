@@ -3,7 +3,7 @@
 # See the inline comments on how to expand/tweak this configuration file
 [meta]
 template = "default"
-commit-id = "048782a2"
+commit-id = "e3bfb27e"
 
 [pyproject]
 codespell_skip = "*"
@@ -14,12 +14,14 @@ dependencies_mappings = [
     ]
 check_manifest_ignores = """
     "news/*",
+    "constraints-mxdev.txt",
     "requirements-mxdev.txt",
 """
 towncrier_issue_format = "[#{issue}](https://github.com/plonegovbr/plonegovbr.portal/issues/{issue})"
 
 [gitignore]
 extra_lines = """
+constraints-mxdev.txt
 requirements-mxdev.txt
 """
 
@@ -27,14 +29,34 @@ requirements-mxdev.txt
 test_runner = "pytest"
 test_path = "/tests"
 use_mxdev = true
-test_deps_additional = "-esources/plonegovbr.portal_base[test]"
-constrain_package_deps = "false"
+test_deps_additional = """
+    -esources/plonegovbr.portal_base[test]
+"""
 
 [github]
-branch = "portalbrasil"
+ref = "main"
 jobs = [
     "qa",
     "test",
     "coverage",
-    "release-ready",
+    "release_ready",
     ]
+extra_lines = """
+  image:
+    needs:
+      - qa
+      - test
+      - coverage
+      - release_ready
+    uses: plonegovbr/plonegovbr.portal/.github/workflows/backend_image.yml@main
+    secrets:
+      registry-username: ${{ github.actor }}
+      registry-password: ${{ secrets.GITHUB_TOKEN }}
+    with:
+      context: .
+      dockerfile: Dockerfile
+      image-name: ${{ vars.IMAGE_NAME }}
+      platforms: linux/amd64
+      is-latest: ${{ github.ref == 'refs/heads/main' }}
+      push: true
+"""
